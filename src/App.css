@@ -1,13 +1,13 @@
 .App {
-  text-align: center;
+    text-align: center;
+    height: 100%;
 }
-
-.App-logo {
-  height: 80px;
-}
-
 .App-header {
   background-color: #181c1f;
   color: #fff;
   padding: 20px;
+}
+html, body{
+    background-color: #575757;
+    height: 100%;
 }
