@@ -10,4 +10,5 @@
 html, body{
     background-color: #575757;
     height: 100%;
+    overflow: hidden;
 }
