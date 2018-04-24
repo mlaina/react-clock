@@ -18,19 +18,20 @@ class MinRing extends Component {
         const {tasks}=this.props;
         const items=[];
         tasks.forEach(task => {
-            items.push(
-                <path key={task.time.ini} d={this.getPath(task)} stroke={task.color} strokeWidth="10" fill="none"/>
-            );
+            let now =new Date();
+            let plusnow=new Date();
+            plusnow.setHours(now.getHours()+1);
+            if(new Date(task.time.fin)>new Date() && new Date(task.time.ini)<plusnow){
+                items.push(
+                    <path key={task.time.ini} d={this.getPath(task)} stroke={task.color} strokeWidth="10" fill="none"/>
+                );
+            }
         });
 
         return items;
     }
     
     getPath(task){
-       
-        console.log(this.radius);
-        console.log(this.center);
-
         this.factory=new FactoryPaths(new Date(task.time.ini), new Date(task.time.fin), this.center, this.radius, false);
     
         return this.factory.getD("mins");

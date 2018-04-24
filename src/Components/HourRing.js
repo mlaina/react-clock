@@ -20,7 +20,6 @@ class HourRing extends Component {
             let now =new Date();
             let plusnow=new Date();
             plusnow.setHours(now.getHours()+12);
-            console.log(plusnow);
             if(new Date(task.time.fin)>new Date() && new Date(task.time.ini)<plusnow){
                 items.push(
                     <path key={task.time.ini} d={this.getPath(task)} stroke={task.color} strokeWidth="10" fill="none"/>
