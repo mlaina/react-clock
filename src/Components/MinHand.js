@@ -10,13 +10,23 @@ class MinHand extends Component {
         this.center = {
             x:w*0.5, 
             y:h*0.5
+        };        
+        this.radius=(w+h)*0.105;
+        this.state={
+            path:new FactoryPaths(null, null, this.center, this.radius ,true)
         };
-        this.path=new FactoryPaths(null, null, this.center, true);
     }
-
-
+    timer(){
+        this.setState({path:new FactoryPaths(null, null, this.center, this.radius ,true)});
+    }
+    componentDidMount() {
+        this.intervalId = setInterval(this.timer.bind(this), 100);
+    }
+    componentWillUnmount(){
+        clearInterval(this.intervalId);
+    }
     render() {
-        return <path  d={this.path.getD("hmin")} stroke="#fff" strokeWidth="100" fill="none"/>;
+        return <path  d={this.state.path.getD("hmin")} stroke="#fff" strokeWidth="105" fill="none"/>;
     }
 }
 

@@ -20,7 +20,7 @@ class Digital extends Component {
         if (this.state.now.getMinutes() < 10)
             mins = '0' + mins;
 
-        text = hours + '-' + mins;
+        text = hours + ':' + mins;
         this.setState({time:text});
         
     }
@@ -34,7 +34,7 @@ class Digital extends Component {
     }
     render() {
         return(
-            <text x="50%" y="50%" fill="white" textAnchor="middle">
+            <text x="50%" y="50%" fill="white" textAnchor="middle" fontSize="12px" alignmentBaseline="middle">
                 {this.state.time}
             </text>
         );

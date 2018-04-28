@@ -21,7 +21,7 @@ class MinRing extends Component {
             let now =new Date();
             let plusnow=new Date();
             plusnow.setHours(now.getHours()+1);
-            if(new Date(task.time.fin)>new Date() && new Date(task.time.ini)<plusnow){
+            if(new Date(task.time.fin)>new Date() && new Date(task.time.fin)<plusnow){
                 items.push(
                     <path key={task.time.ini} d={this.getPath(task)} stroke={task.color} strokeWidth="10" fill="none"/>
                 );
@@ -37,9 +37,17 @@ class MinRing extends Component {
         return this.factory.getD("mins");
     }
 
+    timer(){
+        
+    }
+    componentDidMount() {
+        this.intervalId = setInterval(this.timer.bind(this), 100);
+    }
+    componentWillUnmount(){
+        clearInterval(this.intervalId);
+    }
+
     render() {
-        //<circle cx={this.center.x} cy={this.center.y} r={this.radius+5} stroke="black" strokeWidth="1" fill="none"/>
-        //<circle cx={this.center.x} cy={this.center.y} r="5" stroke="black" strokeWidth="1" fill="none"/>
         return (
             <g>
                 {this.loadPaths()}
