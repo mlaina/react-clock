@@ -9,4 +9,3 @@ To execute the project:
 - Install all the dependencies of the project with `npm start` or `yarn start`.
 - To execute the project, run `npm start` or `yarn start`.
 
-*Made with ❤ by @LluisArevalo*
