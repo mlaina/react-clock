@@ -6,6 +6,6 @@
 
 To execute the project:
 
-- Install all the dependencies of the project with `npm start` or `yarn start`.
+- Install all the dependencies of the project with `npm install`.
 - To execute the project, run `npm start` or `yarn start`.
 
