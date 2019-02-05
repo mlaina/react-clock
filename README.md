@@ -1,6 +1,4 @@
-# Workshop | Introduction to React
-
-## Execution
+#Tick
 
 **Note: If you don't have installed none of them, you can [install NPM](https://www.npmjs.com/get-npm) or [yarn](https://yarnpkg.com/lang/en/docs/install/).**
 
