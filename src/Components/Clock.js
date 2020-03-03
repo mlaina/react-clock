@@ -13,6 +13,7 @@ class Clock extends Component {
         this.state={
             tasks:tasks
         };
+        console.log(this.state.tasks);
     }
 
     render() {

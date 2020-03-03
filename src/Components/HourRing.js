@@ -19,6 +19,8 @@ class HourRing extends Component {
         };
         
         this.markers();
+        console.log("hour ring");
+        console.log(this.state.tasks);
     }
     markers(){
         let ts=this.state.tasks;
@@ -48,7 +50,7 @@ class HourRing extends Component {
             plusnow.setHours(now.getHours()+12);
             if(new Date(task.time.fin)>now && new Date(task.time.ini)<plusnow && !task.pass){
                 items.push(
-                    <path key={task.time.ini} d={this.getPath(task)} stroke={task.color} strokeWidth="10" fill="none"/>
+                    <path key={task.time.ini} d={this.getPath(task)} stroke={task.color} strokeWidth="30" fill="none"/>
                 );
             }
         });
@@ -76,7 +78,7 @@ class HourRing extends Component {
     render() {
         return (
             <g>
-                {this.state.items}
+                {this.state.its}
             </g>
         );
     }
