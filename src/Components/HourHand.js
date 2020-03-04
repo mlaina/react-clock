@@ -11,7 +11,7 @@ class HourHand extends Component {
             x:w*0.5, 
             y:h*0.5
         };
-        this.radius=(w+h)*0.04;
+        this.radius=(w+h)*0.048;
         this.state={
             path:new FactoryPaths(null, null, this.center, this.radius ,true)
         };

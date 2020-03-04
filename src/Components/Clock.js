@@ -19,7 +19,7 @@ class Clock extends Component {
     render() {
         return(
             <svg> 
-                <circle cx="50%" cy="50%" r="10%" stroke="white" fill="none"/>
+                <circle cx="50%" cy="50%" r="12.5%" stroke="white" fill="none"/>
                 <circle cx="50%" cy="50%" r="25%" stroke="white" fill="none"/>
                 <HourRing tasks={this.state.tasks}/>
                 <HourHand/>
